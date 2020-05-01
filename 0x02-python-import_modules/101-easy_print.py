@@ -1,2 +1,3 @@
 #!/usr/bin/python3
-__import__(("iscool"))
+from python import python
+python()
