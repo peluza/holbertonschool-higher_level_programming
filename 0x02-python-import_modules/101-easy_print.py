@@ -1,3 +1,2 @@
 #!/usr/bin/python3
-from python import python
-python()
+__import__(("python"))
