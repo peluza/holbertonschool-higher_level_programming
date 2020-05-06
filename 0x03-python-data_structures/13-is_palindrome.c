@@ -7,10 +7,10 @@ listint_t *palindrome_rec(listint_t *tail, listint_t *head);
  *@tail: tail of the end of the  linked list
  *Return: 0 if it is not palidrome or 1 if it is palindrome
  */
-listint_t *palindrome_rec(listint_t *tail, listint_t *head)
+listint_t *palindrome(listint_t *tail, listint_t *head)
 {
 	if (tail->next != 0)
-		head = palindrome_rec(tail->next, head);
+		head = palindrome(tail->next, head);
 	if (head != 0)
 	{
 		if (head->next == 0)
