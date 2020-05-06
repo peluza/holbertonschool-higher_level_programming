@@ -2,7 +2,7 @@
 
 listint_t *palindrome(listint_t *tail, listint_t *head);
 /**
- *palindrome_rec - this function evaluates if singly linked list is palindrome
+ *palindrome - this function evaluates if singly linked list is palindrome
  *@head: head of the singly linked list
  *@tail: tail of the end of the  linked list
  *Return: 0 if it is not palidrome or 1 if it is palindrome
