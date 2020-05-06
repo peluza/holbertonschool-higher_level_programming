@@ -1,6 +1,6 @@
 #include "lists.h"
 
-listint_t *palindrome_rec(listint_t *tail, listint_t *head);
+listint_t *palindrome(listint_t *tail, listint_t *head);
 /**
  *palindrome_rec - this function evaluates if singly linked list is palindrome
  *@head: head of the singly linked list
