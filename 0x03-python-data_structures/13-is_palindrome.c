@@ -30,7 +30,7 @@ int is_palindrome(listint_t **head)
 {
 	if (head[0] == 0)
 		return (1);
-	if (palindrome_rec(head[0], head[0]) == 0)
+	if (palindrome(head[0], head[0]) == 0)
 		return (0);
 	return (1);
 }
