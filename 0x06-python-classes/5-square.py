@@ -18,7 +18,7 @@ class Square:
         return self.__size * self.__size
 
     def my_print(self):
-        """class size"""
+        """class Square.my_print"""
         if self.size == 0:
             print("")
         else:
