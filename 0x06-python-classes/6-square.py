@@ -11,7 +11,7 @@ class Square:
         if size < 0:
             raise ValueError("size must be >= 0")
         else:
-            self.__size = size
+            self.size = size
         if type(position) != tuple:
             raise TypeError("position must be a tuple of 2 positive integers")
         elif type(position[0]) != int and type(position[1]) != int:
@@ -19,11 +19,12 @@ class Square:
         elif position[0] < 0 and position[1] < 0:
             raise TypeError("position must be a tuple of 2 positive integers")
         else:
-            self.__position = position
+            self.position = position
 
     def area(self):
         """class Square.area"""
         return self.__size * self.__size
+
 
     @property
     def size(self):
