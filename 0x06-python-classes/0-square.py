@@ -13,4 +13,4 @@ class Square:
             napoleon_include_private_with_doc = True
 
         """
-        pass    
+        pass
