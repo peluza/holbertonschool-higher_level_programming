@@ -25,9 +25,6 @@ class Square:
         """class Square.area"""
         return self.__size * self.__size
 
-    def my_print(self):
-        """class Square.my_print"""
-
     @property
     def size(self):
         """class size"""
