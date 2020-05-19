@@ -25,7 +25,6 @@ class Square:
         """class Square.area"""
         return self.__size * self.__size
 
-
     @property
     def size(self):
         """class size"""
