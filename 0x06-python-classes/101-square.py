@@ -13,8 +13,10 @@ class Square:
         """class Square.area"""
         return self.__size * self.__size
 
-    def __repr__(self):
-        self.my_print
+    def __str__(self):
+        if self.my_print:
+            self.my_print()
+            return ""
 
     @property
     def size(self):
@@ -57,10 +59,10 @@ class Square:
             return
         else:
             for x in range(self.__position[1]):
-                print("")
+                print("", end='')
             for y in range(self.size):
                 for i in range(self.position[0]):
-                    print(" ", end="")
+                    print(" ", end='')
                 for j in range(self.__size):
-                    print("#", end="")
+                    print("#", end='')
                 print("")
