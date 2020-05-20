@@ -23,7 +23,7 @@ class Square:
                 print(" " * self.__position[0], end='')
                 print("#" * self.__size, end='')
             else:
-                print(" " * self.__position[0],end='')
+                print(" " * self.__position[0], end='')
                 print("#" * self.__size)
         return ""
 
