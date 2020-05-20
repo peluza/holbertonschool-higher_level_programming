@@ -14,9 +14,18 @@ class Square:
         return self.__size * self.__size
 
     def __str__(self):
-        if self.my_print:
-            self.my_print()
+        if self.__size == 0:
             return ""
+        for x in range(self.__position[1]):
+            print("")
+        for y in range(self.__size):
+            if y == (self.__size - 1):
+                print(" " * self.__position[0], end='')
+                print("#" * self.__size, end='')
+            else:
+                print(" " * self.__position[0],end='')
+                print("#" * self.__size)
+        return ""
 
     @property
     def size(self):
