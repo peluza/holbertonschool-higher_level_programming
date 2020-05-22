@@ -1,0 +1,52 @@
+3-say_my_name.txt
+
+Import module:
+
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Funtion:
+writhe a funtion at print the first name at last name
+
+Operations:
+write 'firsts_name' and 'last_name'
+
+test #0: writhe the first name and last name
+    >>> say_my_name("John", "Smith")
+    My name is John Smith
+
+test #1: writhe the first name and last name
+    >>> say_my_name("Bob")
+    My name is Bob 
+
+test #2: writhe the first name and last name
+    >>> say_my_name(12, "White")
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+test #3: writhe the first name and last name
+    >>> say_my_name("White", 12)
+    Traceback (most recent call last):
+    TypeError: last_name must be a string
+
+test #4: writhe the first name and last name
+    >>> say_my_name(str(123), "Edi")
+    My name is 123 Edi
+
+test #5: writhe the first name and last name
+    >>> say_my_name("Edi", str(123))
+    My name is Edi 123
+
+test #6: writhe the first name and last name
+    >>> type(say_my_name("Edi", str(123)))
+    My name is Edi 123
+    <class 'NoneType'>
+
+test #7: writhe the first name and last name
+    >>> say_my_name("White", 12.3)
+    Traceback (most recent call last):
+    TypeError: last_name must be a string
+
+test #8: writhe the first name and last name
+    >>> say_my_name(12.3, "White")
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
