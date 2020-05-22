@@ -1,0 +1,53 @@
+0 - add integer:
+
+Import module:
+
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+Funtion:
+writhe a funtion tat adds two integer.
+
+Operations:
+ ‘a’ and ‘b’ must be integers or float:
+
+test #0: add two integer 
+    >>> add_integer(1, 2)
+    3
+
+test #1: add value a is positive and b is negative
+    >>> add_integer(100, -2)
+    98
+
+test #2: add value a is positive and b is None
+    >>> add_integer(2)
+    100
+
+test #3: add value a is float and b is negative
+    >>> add_integer(100.3, -2)
+    98
+
+test #4 add value a is None and b is positive
+    >>> add_integer(None, 100)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+test #5 add value a is positve and b is None
+    >>> add_integer(6, None)
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+
+Test #6: function without parameters
+    >>> add_integer()
+    Traceback (most recent call last):
+    TypeError: add_integer() missing 1 required positional argument: 'a'
+
+Test #7: add value a is not defined and b is positive
+    >>> add_integer(a, 123)
+    Traceback (most recent call last):
+    NameError: name 'a' is not defined
+
+Test #8: add value a is integer and b is not defined
+    >>> add_integer(123, b)
+    Traceback (most recent call last):
+    NameError: name 'b' is not defined
+
