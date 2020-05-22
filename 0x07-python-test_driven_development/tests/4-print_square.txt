@@ -1,0 +1,37 @@
+4-print_square
+
+Import module:
+
+    >>> print_square = __import__('4-print_square').print_square
+
+Funtion:
+writhe a funtion at print the  perfect square
+
+Operations:
+write 'size' the square
+
+test #0: whrite size is positive
+    >>> print_square(4)
+    ####
+    ####
+    ####
+    ####
+
+test #1: whrite size is positive
+    >>> print_square(-1)
+    Traceback (most recent call last):
+    ValueError: size must be >= 0
+
+test #2: whrite size is float
+    >>> print_square(3.8)
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+
+test #3: whrite size is positive
+    >>> print_square(int("4"))
+    ####
+    ####
+    ####
+    ####
+
+

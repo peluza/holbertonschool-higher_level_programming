@@ -50,3 +50,8 @@ test #8: writhe the first name and last name
     >>> say_my_name(12.3, "White")
     Traceback (most recent call last):
     TypeError: first_name must be a string
+
+test #9: writhe the first name and last name
+    >>> say_my_name()
+    Traceback (most recent call last):
+    TypeError: say_my_name() missing 1 required positional argument: 'first_name'
