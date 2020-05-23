@@ -1,0 +1,59 @@
+5-text_indentation
+
+Import module:
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Funtion:
+writhe a funtion at print the  string the text
+
+Operations:
+write 'text' is the text is a long string
+
+test #0: whrite at string
+    >>> text = "Hello"
+    >>> text_indentation(text)
+    Hello
+
+test #1: whrite at string
+    >>> text = "Hello World"
+    >>> text_indentation(text)
+    Hello World
+
+test #2: whrite at string at caracters 
+    >>> text = "Hello."
+    >>> text_indentation(text)
+    Hello.
+
+test #3: whrite at string at caracters and space
+    >>> text = "Hello. "
+    >>> text_indentation(text)
+    Hello.
+    <BLANKLINE>
+
+test #4: whrite at string at caracters and space more long
+    >>> text = "Hello. world: Ed? "
+    >>> text_indentation(text)
+    Hello.
+    <BLANKLINE>
+    world:
+    <BLANKLINE>
+    Ed?
+    <BLANKLINE>
+
+test #5: whrite at string at caracters and  is not space more long
+    >>> text = "Hello.world:Ed?"
+    >>> text_indentation(text)
+    Hello.world:Ed?
+
+test #6: whrite at string at caracters and  space in end
+    >>> text = "Hello.world:Ed? "
+    >>> text_indentation(text)
+    Hello.world:Ed?
+    <BLANKLINE>
+
+test #6: whrite at string at caracters and  space in end
+    >>> text = 123
+    >>> text_indentation(text)
+    Traceback (most recent call last):
+    TypeError: text must be a string
