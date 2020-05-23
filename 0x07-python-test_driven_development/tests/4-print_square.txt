@@ -28,10 +28,12 @@ test #2: whrite size is float
     TypeError: size must be an integer
 
 test #3: whrite size is positive
-    >>> print_square(int("4"))
-    ####
-    ####
-    ####
-    ####
+    >>> print_square(int("6"))
+    ######
+    ######
+    ######
+    ######
+    ######
+    ######
 
 
