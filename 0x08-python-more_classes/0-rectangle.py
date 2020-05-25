@@ -4,6 +4,9 @@
 
 
 class Rectangle:
+    """Rectangle
+    """
+
     def __init__(self):
         """init-self
         """
