@@ -25,9 +25,19 @@ class Rectangle:
             self.__height = height
 
     def area(self):
+        """area
+
+        Returns:
+            self -- width * height
+        """
         return self.width * self.height
 
     def perimeter(self):
+        """perimeter
+
+        Returns:
+            self -- 2 * height + 2 * width
+        """
         if self.width == 0 or self.height == 0:
             return 0
         else:
@@ -35,10 +45,24 @@ class Rectangle:
 
     @property
     def width(self):
+        """width (self)
+
+        Returns:
+            self -- width
+        """
         return self.__width
 
     @width.setter
     def width(self, value):
+        """width (self,value)
+
+        Arguments:
+            value {int} -- value is at intenger positve
+
+        Raises:
+            TypeError: width must be an integer
+            ValueError: width must be >= 0
+        """
         if type(value) is not int:
             raise TypeError("width must be an integer")
         if value < 0:
@@ -48,10 +72,24 @@ class Rectangle:
 
     @property
     def height(self):
+        """heigth(self)
+
+        Returns:
+            self -- height
+        """
         return self.__height
 
     @height.setter
     def height(self, value):
+        """heigth(self, value)
+
+        Arguments:
+            value {int} -- value is the number interger positive
+
+        Raises:
+            TypeError: height must be an integer
+            ValueError: height must be >= 0
+        """
         if type(value) is not int:
             raise TypeError("height must be an integer")
         if value < 0:
