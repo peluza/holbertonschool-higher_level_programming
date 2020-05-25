@@ -14,14 +14,6 @@ class Rectangle:
             width {int} -- width the rectangle (default: {0})
             height {int} -- height the rectangle (default: {0})
         """
-        if type(width) != int:
-            raise TypeError("width must be an integer")
-        if width < 0:
-            raise ValueError("width must be >= 0")
-        if type(height) != int:
-            raise TypeError("height must be an integer")
-        if height < 0:
-            raise ValueError("height must be >= 0")
         self.height = height
         self.width = width
 
@@ -31,7 +23,7 @@ class Rectangle:
         Returns:
             self -- width * height
         """
-        return self.__width * self.__height
+        return self.width * self.height
 
     def perimeter(self):
         """perimeter
@@ -39,7 +31,7 @@ class Rectangle:
         Returns:
             self -- 2 * height + 2 * width
         """
-        if self.__width == 0 or self.__height == 0:
+        if self.width == 0 or self.height == 0:
             return 0
         else:
             return 2 * self.__height + 2 * self.__width
