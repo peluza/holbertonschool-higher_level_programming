@@ -4,7 +4,16 @@
 
 
 class Rectangle:
+    """Rectangle
+    """
+
     def __init__(self, width=0, height=0):
+        """the Rectangle__init__
+
+        Keyword Arguments:
+            width {int} -- width the rectangle (default: {0})
+            height {int} -- height the rectangle (default: {0})
+        """
         self.width = width
         self.height = height
 
