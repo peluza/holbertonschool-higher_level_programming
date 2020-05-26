@@ -2,7 +2,7 @@
 Ahora que entendemos que todo es un objeto y tenemos un poco de conocimiento, hagamos una pausa y veamos un poco más de cerca cómo funciona Python con diferentes tipos de objetos.
 
 Por cierto, ¿alguna vez has modificado una variable sin saberlo o sin querer? Quiero decir:
-
+```
 >>> a = 1
 >>> b = a
 >>> a = 2
@@ -17,7 +17,7 @@ OKAY. ¿Pero qué hay de esto?
 >>> m
 ['x', 2, 3]
 >>>
-
+```
 
 Este proyecto es un poco diferente a los proyectos habituales. La primera parte es solo preguntas sobre la especificidad de Python como "¿Cuál sería el resultado de ...". Primero debe leer toda la documentación (como de costumbre :)) , luego tomarse el tiempo para pensar y hacer una lluvia de ideas con sus compañeros sobre lo que piensa y por qué. Intenta hacer esto sin codificar nada durante unas horas .
 
