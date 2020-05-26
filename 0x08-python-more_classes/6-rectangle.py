@@ -4,9 +4,27 @@
 
 
 class Rectangle:
+    """Rectangle
+
+    Raises:
+        TypeError: width must be an integer
+        ValueError: width must be >= 0
+        TypeError: height must be an integer
+        ValueError: height must be >= 0
+
+    Returns:
+        self -- the configurations options at neceity for example
+        area, perimeter, __str__, __repr__ and __del__
+    """
     number_of_instances = 0
 
     def __init__(self, width=0, height=0):
+        """_init(self,width,height)
+
+        Keyword Arguments:
+            width {int} -- width the rectangle (default: {0})
+            height {int} -- height the rectangle (default: {0})
+        """
         self.width = width
         self.height = height
         Rectangle.number_of_instances += 1
