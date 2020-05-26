@@ -16,7 +16,7 @@ OKAY. ¿Pero qué hay de esto?
 >>> l[0] = 'x'
 >>> m
 ['x', 2, 3]
->>> 
+>>>
 '''
 
 
