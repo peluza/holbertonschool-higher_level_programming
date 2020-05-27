@@ -10,6 +10,6 @@ def copy_list(l):
         l {list} -- the parameter is the list
 
     Returns:
-        [list] -- at copy
+        list -- at copy
     """
     return l[:]
