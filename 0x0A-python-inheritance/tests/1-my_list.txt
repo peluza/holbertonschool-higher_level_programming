@@ -34,7 +34,7 @@ test #2: clear the list
    >>> print(my_list)
    []
 
-test #2: the add the text
+test #3: the add the text
    >>> my_list = MyList()
    >>> my_list.append(1)
    >>> my_list.append(2)
@@ -42,3 +42,25 @@ test #2: the add the text
    >>> my_list.append("Isaza")
    >>> print(my_list)
    [1, 2, 3, 'Isaza']
+
+test #4: the print list in the class Mylists
+    >>> my_list = MyList([1, 2, 3])
+    >>> my_list.append(4)
+    >>> print(my_list)
+    [1, 2, 3, 4]
+
+test #5: the print list in the class Mylists
+    >>> my_list = MyList([1, 2, 3])
+    >>> print(my_list)
+    [1, 2, 3]
+
+test #6: the print list in the class Mylists
+    >>> my_list = MyList([1, 2, 3, -10])
+    >>> print(my_list)
+    [1, 2, 3, -10]
+
+test #7: the print list in the class Mylists
+    >>> my_list = MyList([1, 2, 3])
+    >>> my_list.append(-10)
+    >>> print(my_list)
+    [1, 2, 3, -10]
