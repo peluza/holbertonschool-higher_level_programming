@@ -64,3 +64,14 @@ test #7: the print list in the class Mylists
     >>> my_list.append(-10)
     >>> print(my_list)
     [1, 2, 3, -10]
+
+test #8: the print list in the class Mylists
+    >>> my_list = MyList([1, 2, 3])
+    >>> my_list.append(-10)
+    >>> my_list.print_sorted()
+    [-10, 1, 2, 3]
+
+test #9: the print list in the class Mylists
+    >>> my_list = MyList([1, 2, 3, -10])
+    >>> my_list.print_sorted()
+    [-10, 1, 2, 3]
