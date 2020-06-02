@@ -10,6 +10,9 @@ class MyList (list):
         list {list} -- the arguments is the list
     """
 
+    def __init__(self):
+        pass
+
     def print_sorted(self):
         """print_sorted
 
