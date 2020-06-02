@@ -52,7 +52,17 @@ class Rectangle(BaseGeometry):
         self.__height = height
 
     def area(self):
+        """area
+
+        Returns:
+            int -- number intergert
+        """
         return self.__width * self.__height
 
     def __str__(self):
+        """__str__
+
+        Returns:
+            str -- the result in str format
+        """
         return "[Rentagle] {}/{}".format(self.__width, self.__height)
