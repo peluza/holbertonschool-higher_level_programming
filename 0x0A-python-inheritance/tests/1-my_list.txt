@@ -1,0 +1,44 @@
+1-my_list.txt
+
+Import module:
+
+    >>> MyList = __import__('1-my_list').MyList
+
+Class:
+writhe a class Mylists the inherits form list.
+
+Operations:
+ MyList is the varibale is list
+
+test #0: add the numbers integers in the list
+    >>> my_list = MyList()
+    >>> my_list.append(1)
+    >>> my_list.append(4)
+    >>> my_list.append(2)
+    >>> my_list.append(3)
+    >>> my_list.append(5)
+    >>> print(my_list)
+    [1, 4, 2, 3, 5]
+
+test #1: add the numbers integers in the list
+    >>> my_list = MyList()
+    >>> my_list.append(3)
+    >>> my_list.append(2)
+    >>> my_list.append(1)
+    >>> print(my_list)
+    [3, 2, 1]
+
+test #2: clear the list
+   >>> my_list = MyList([1, 2, 20])
+   >>> my_list.clear()
+   >>> print(my_list)
+   []
+
+test #2: the add the text
+   >>> my_list = MyList()
+   >>> my_list.append(1)
+   >>> my_list.append(2)
+   >>> my_list.append(3)
+   >>> my_list.append("Isaza")
+   >>> print(my_list)
+   [1, 2, 3, 'Isaza']
