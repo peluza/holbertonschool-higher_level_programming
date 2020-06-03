@@ -3,7 +3,7 @@
     """
 
 
-class BaseGeometry:
+class BaseGeometry():
     """BaseGeometry
     """
 
@@ -23,8 +23,8 @@ class BaseGeometry:
             value {int} -- the value is format int
 
         Raises:
-            TypeError: [description]
-            ValueError: [description]
+            TypeError: must be an integer
+            ValueError: must be greater than 0"
         """
         if type(value) is not int:
             raise TypeError("{} must be an integer".format(name))
