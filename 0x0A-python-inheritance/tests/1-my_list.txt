@@ -97,3 +97,9 @@ test #12: the print list in the class Mylists
     >>> my_list.append(-10)
     >>> my_list.print_sorted()
     [-10, -3, -2, -1]
+
+test #13: the print list in the class Mylists
+    >>> my_list = MyList([-1, -2, 99999,3410705932])
+    >>> my_list.append(-10)
+    >>> my_list.print_sorted()
+    [-10, -2, -1, 99999, 3410705932]
