@@ -13,7 +13,7 @@ def read_lines(filename="", nb_lines=0):
     with open(filename, encoding="utf-8") as my_file:
         count = 0
         if nb_lines <= 0:
-            print(my_file.read())
+            print(my_file.read(), end='')
         while count in range(nb_lines):
             line = my_file.readline()
             if not line:
