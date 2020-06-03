@@ -11,102 +11,21 @@ Operations:
  MyList is the varibale is list
 
 test #0: add the numbers integers in the list
-    >>> my_list = MyList()
-    >>> my_list.append(1)
-    >>> my_list.append(4)
-    >>> my_list.append(2)
-    >>> my_list.append(3)
-    >>> my_list.append(5)
-    >>> print(my_list)
-    [1, 4, 2, 3, 5]
-
-    >>> my_list = MyList()
-    >>> my_list.append(3)
-    >>> my_list.append(2)
-    >>> my_list.append(1)
-    >>> print(my_list)
-    [3, 2, 1]
-
-   >>> my_list = MyList([1, 2, 20])
-   >>> my_list.clear()
-   >>> print(my_list)
-   []
-
-   >>> my_list = MyList()
-   >>> my_list.append(1)
-   >>> my_list.append(2)
-   >>> my_list.append(3)
-   >>> my_list.append("Isaza")
-   >>> print(my_list)
-   [1, 2, 3, 'Isaza']
-
-    >>> my_list = MyList([1, 2, 3])
-    >>> my_list.append(4)
-    >>> print(my_list)
-    [1, 2, 3, 4]
-
-    >>> my_list = MyList([1, 2, 3])
-    >>> print(my_list)
-    [1, 2, 3]
-
-    >>> my_list = MyList([1, 2, 3, -10])
-    >>> print(my_list)
-    [1, 2, 3, -10]
-
-    >>> my_list = MyList([1, 2, 3])
-    >>> my_list.append(-10)
-    >>> print(my_list)
-    [1, 2, 3, -10]
-
-    >>> my_list = MyList([1, 2, 3])
-    >>> my_list.append(-10)
-    >>> my_list.print_sorted()
-    [-10, 1, 2, 3]
-
-    >>> my_list = MyList([1, 2, 3, -10])
-    >>> my_list.print_sorted()
-    [-10, 1, 2, 3]
-
-    >>> my_list = MyList()
-    >>> my_list.append(1)
-    >>> my_list.append(4)
-    >>> my_list.append(2)
-    >>> my_list.append(3)
-    >>> my_list.append(5)
-    >>> my_list.print_sorted()
-    [1, 2, 3, 4, 5]
-
-    >>> my_list = MyList([1, 2, 3])
-    >>> my_list.append(-10)
-    >>> my_list.print_sorted()
-    [-10, 1, 2, 3]
-
-    >>> my_list = MyList([-1, -2, -3])
-    >>> my_list.append(-10)
-    >>> my_list.print_sorted()
-    [-10, -3, -2, -1]
-
-    >>> my_list = MyList([-1, -2, 99999,3410705932])
-    >>> my_list.append(-10)
-    >>> my_list.print_sorted()
-    [-10, -2, -1, 99999, 3410705932]
-
-    >>> my_list = MyList([-1, -2, -99999, -3410705932])
-    >>> my_list.append(10)
-    >>> my_list.print_sorted()
-    [-3410705932, -99999, -2, -1, 10]
-
-    >>> my_list = MyList()
-    >>> my_list.print_sorted()
-    []
-
-    >>> my_list = MyList()
-    >>> my_list.append(1)
-    >>> my_list.append(4)
-    >>> my_list.append(2)
-    >>> my_list.append(3)
-    >>> my_list.append(5)
-    >>> print(my_list)
-    [1, 4, 2, 3, 5]
-    >>> my_list.print_sorted()
-    [1, 2, 3, 4, 5]
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(4)
+>>> my_list.append(2)
+>>> my_list.append(3)
+>>> my_list.append(5)
+>>> print(my_list)
+[1, 4, 2, 3, 5]
+>>> my_list.print_sorted()
+[1, 2, 3, 4, 5]
+>>> my_list.append(-1)
+>>> print(my_list)
+[1, 4, 2, 3, 5, -1]
+>>> my_list.print_sorted()
+[-1, 1, 2, 3, 4, 5]
+>>> my_list = MyList([])
+>>> my_list.print_sorted()
+[]
