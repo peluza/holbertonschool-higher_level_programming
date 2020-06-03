@@ -16,5 +16,4 @@ class MyList (list):
         Returns:
             [list] -- print the list
         """
-        new_list = sorted(self)
-        print(new_list)
+        print(sorted(self))
