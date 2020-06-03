@@ -65,3 +65,4 @@ TypeError: integer_validator() missing 2 required positional arguments: 'name' a
 >>> bg.integer_validator("distance", (1, ))
 Traceback (most recent call last):
 TypeError: distance must be an integer
+>>> bg.integer_validator(1, 1)
