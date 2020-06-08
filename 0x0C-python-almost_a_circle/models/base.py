@@ -22,6 +22,7 @@ class Base:
         else:
             self.id = id
 
+    @staticmethod
     def to_json_string(list_dictionaries):
         if type(list_dictionaries) is list:
             if list_dictionaries is None:
@@ -30,6 +31,7 @@ class Base:
             else:
                 return json.dumps(list_dictionaries)
 
+    @staticmethod
     def from_json_string(json_string):
         if json_string is None and json_string != []:
             new_list = []
@@ -51,3 +53,14 @@ class Base:
             with open(
                     cls.__name__ + ".json", mode="w", encoding="utf-8") as f:
                 f.write(new_json)
+
+    @classmethod
+    def create(cls, **dictionary):
+        if cls.__name__ == "Rectangle":
+            obj = cls(1, 1)
+            obj.update(**dictionary)
+            return obj
+        elif cls.__name__ == "Square":
+            obj = cls(1)
+            obj.update(**dictionary)
+            return obj
