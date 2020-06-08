@@ -3,7 +3,7 @@
 """
 import unittest
 import pep8
-from models.rectangle import Rectangle
+from models.rectangle import Rectangle, Base
 
 
 def print1(value):
@@ -20,11 +20,11 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_rectangle_positive(self):
         r1 = Rectangle(10, 2)
-        self.assertEqual(r1.id, 12)
+        self.assertEqual(r1.id, 16)
         r2 = Rectangle(130, 2, 34)
-        self.assertEqual(r2.id, 13)
+        self.assertEqual(r2.id, 17)
         r3 = Rectangle(130, 2, 34, 23)
-        self.assertEqual(r3.id, 14)
+        self.assertEqual(r3.id, 18)
 
     def test_rectangle_negative(self):
         with self.assertRaises(ValueError):
@@ -200,3 +200,24 @@ class TestMaxInteger(unittest.TestCase):
         r67 = Rectangle(10, 2)
         self.assertEqual(
             r67.to_dictionary(), {'id': r67.id, 'width': 10, 'height': 2, 'x': 0, 'y': 0})
+
+    def test_rectangle_json(self):
+        r68 = Rectangle(10, 2, 1, 9, 345)
+        r69 = r68.to_dictionary()
+        self.assertEqual(
+            Base.to_json_string([r69]), '[{"id": 345, "width": 10, "height": 2, "x": 1, "y": 9}]')
+        r70 = Rectangle(10, 2, 1, 9)
+        r71 = r70.to_dictionary()
+        self.assertEqual(
+            Base.to_json_string([r71]), '[{"id": 12, "width": 10, "height": 2, "x": 1, "y": 9}]')
+        r72 = Rectangle(10, 2, 1)
+        r73 = r72.to_dictionary()
+        self.assertEqual(
+            Base.to_json_string([r73]), '[{"id": 13, "width": 10, "height": 2, "x": 1, "y": 0}]')
+        r74 = Rectangle(10, 2)
+        r75 = r74.to_dictionary()
+        self.assertEqual(
+            Base.to_json_string(r75), None)
+        r76 = Rectangle(10, 2)
+        self.assertEqual(
+            Base.to_json_string([]), '[]')
