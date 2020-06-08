@@ -23,8 +23,24 @@ class Base:
             self.id = id
 
     def to_json_string(list_dictionaries):
-        if list_dictionaries is None:
-            list_dictionaries = []
-            return list_dictionaries
+        if type(list_dictionaries) is list:
+            if list_dictionaries is None:
+                list_dictionaries = []
+                return list_dictionaries
+            else:
+                return json.dumps(list_dictionaries)
+
+    @classmethod
+    def save_to_file(cls, list_objs):
+        new_list = []
+        if list_objs is None:
+            with open(
+                    cls.__name__ + ".json", mode="w", encoding="utf-8") as f:
+                f.write(new_list)
         else:
-            return json.dumps(list(list_dictionaries))
+            for i in list_objs:
+                new_list.append(i.to_dictionary())
+            new_json = cls.to_json_string(new_list)
+            with open(
+                    cls.__name__ + ".json", mode="w", encoding="utf-8") as f:
+                f.write(new_json)
