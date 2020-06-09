@@ -221,7 +221,7 @@ class TestMaxInteger(unittest.TestCase):
         r74 = Rectangle(10, 2)
         r75 = r74.to_dictionary()
         self.assertEqual(
-            Base.to_json_string(r75), None)
+            Base.to_json_string(r75), '{"id": 3, "width": 10, "height": 2, "x": 0, "y": 0}')
         r76 = Rectangle(10, 2)
         self.assertEqual(
             Base.to_json_string([]), '[]')
