@@ -3,6 +3,7 @@
     """
 import json
 import os
+import csv
 
 
 class Base:
@@ -11,12 +12,11 @@ class Base:
     __nb_objects = 0
 
     def __init__(self, id=None):
-        """__init__(self,id)
+        """__init__(self, id)
 
         Args:
-            id (int, optional): the asifned at id  . Defaults to None.
+            id (optional): autoasigned. Defaults to None.
         """
-
         if id is None:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
@@ -80,3 +80,44 @@ class Base:
                 for i in new_json:
                     new_list.append(cls.create(**i))
                 return new_list
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        filename = cls.__name__ + ".csv"
+        new = []
+        for obj in list_objs:
+            new.append(obj.to_dictionary())
+        with open(filename, mode="w", encoding="utf-8") as f:
+            csv_write = csv.writer(f)
+            c = 0
+            for dic in new:
+                if c == 0:
+                    header = dic.keys()
+                    h = list(header)
+                    csv_write.writerow(h)
+                    c += 1
+                val = list(dic.values())
+                csv_write.writerow(val)
+
+    @classmethod
+    def load_from_file_csv(cls):
+        filename = cls.__name__ + ".csv"
+        new_dict = {}
+        new_list = []
+        my_list = []
+        if os.path.isfile(filename) is False:
+            return []
+        else:
+            with open(filename, mode="r", encoding="utf-8") as f:
+                reader = csv.reader(f)
+                header = next(reader)
+                for row in reader:
+                    c = 0
+                    for value in row:
+                        new_dict[header[c]] = int(value)
+                        c += 1
+                    new_list.append(new_dict)
+                    new_dict = {}
+                for dic in new_list:
+                    my_list.append(cls.create(**dic))
+                return my_list
