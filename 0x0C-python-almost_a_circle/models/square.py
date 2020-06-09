@@ -24,10 +24,18 @@ class Square(Rectangle):
         self.size = size
 
     def __str__(self):
+        """__str__
+
+        Returns:
+            str: [Square] (<id>) <x>/<y> - <size>
+        """
         return str("[Square] ({}) {}/{} - {}".format(
             self.id, self.x, self.y, self.size))
 
     def update(self, *args, **kwargs):
+        """update
+        update the information at the funtion
+        """
         new_list = ["id", "size", "x", "y"]
         if args is not None and args != ():
             for i in range(len(new_list)):
@@ -38,6 +46,10 @@ class Square(Rectangle):
                 setattr(self, k, v)
 
     def to_dictionary(self):
+        """directionary
+        Returns:
+            dict: the return the date of the funtion
+        """
         new_dict = {}
         new_list = ["id", "size", "x", "y"]
         for i in range(len(new_list)):

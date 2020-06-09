@@ -28,9 +28,18 @@ class Rectangle(Base):
         super().__init__(id)
 
     def area(self):
+        """area
+
+        Returns:
+            int: width * height
+        """
         return self.__width * self.__height
 
     def display(self):
+        """display
+
+        print the result
+        """
         for j in range(self.__y):
             print("")
         for i in range(self.__height):
@@ -38,10 +47,18 @@ class Rectangle(Base):
             print("#" * self.__width)
 
     def __str__(self):
+        """__str__
+
+        Returns:
+            str : [Rectangle] (<id>) <x>/<y> - <width>/<height>
+        """
         return str("[Rectangle] ({}) {}/{} - {}/{}".format(
             self.id, self.__x, self.__y, self.__width, self.__height))
 
     def update(self, *args, **kwargs):
+        """update
+        update the information at the funtion
+        """
         new_list = ["id", "width", "height", "x", "y"]
         if args is not None and args != ():
             for i in range(len(new_list)):
@@ -52,6 +69,10 @@ class Rectangle(Base):
                 setattr(self, k, v)
 
     def to_dictionary(self):
+        """directionary
+        Returns:
+            dict: the return the date of the funtion
+        """
         new_dict = {}
         new_list = ["id", "width", "height", "x", "y"]
         for i in range(len(new_list)):
