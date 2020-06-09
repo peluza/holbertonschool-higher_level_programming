@@ -12,6 +12,9 @@ def print1(value):
 
 class TestMaxInteger(unittest.TestCase):
 
+    def setUp(self):
+        Base._Base__nb_objects = 0
+
     def test_pep8_conformance_base(self):
         pep8style = pep8.StyleGuide(quiet=True)
         result = pep8style.check_files(['models/rectangle.py'])
@@ -20,11 +23,11 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_rectangle_positive(self):
         r1 = Rectangle(10, 2)
-        self.assertEqual(r1.id, 16)
+        self.assertEqual(r1.id, 1)
         r2 = Rectangle(130, 2, 34)
-        self.assertEqual(r2.id, 17)
-        r3 = Rectangle(130, 2, 34, 23)
-        self.assertEqual(r3.id, 18)
+        self.assertEqual(r2.id, 2)
+        r3 = Rectangle(130, 2, 34, 2)
+        self.assertEqual(r3.id, 3)
 
     def test_rectangle_negative(self):
         with self.assertRaises(ValueError):
@@ -209,11 +212,11 @@ class TestMaxInteger(unittest.TestCase):
         r70 = Rectangle(10, 2, 1, 9)
         r71 = r70.to_dictionary()
         self.assertEqual(
-            Base.to_json_string([r71]), '[{"id": 12, "width": 10, "height": 2, "x": 1, "y": 9}]')
+            Base.to_json_string([r71]), '[{"id": 1, "width": 10, "height": 2, "x": 1, "y": 9}]')
         r72 = Rectangle(10, 2, 1)
         r73 = r72.to_dictionary()
         self.assertEqual(
-            Base.to_json_string([r73]), '[{"id": 13, "width": 10, "height": 2, "x": 1, "y": 0}]')
+            Base.to_json_string([r73]), '[{"id": 2, "width": 10, "height": 2, "x": 1, "y": 0}]')
         r74 = Rectangle(10, 2)
         r75 = r74.to_dictionary()
         self.assertEqual(

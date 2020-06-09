@@ -9,6 +9,9 @@ from models.base import Base
 
 class TestMaxInteger(unittest.TestCase):
 
+    def setUp(self):
+        Base._Base__nb_objects = 0
+
     def test_pep8_conformance_base(self):
         pep8style = pep8.StyleGuide(quiet=True)
         result = pep8style.check_files(['models/square.py'])
@@ -146,11 +149,11 @@ class TestMaxInteger(unittest.TestCase):
         r70 = Square(10, 1, 9)
         r71 = r70.to_dictionary()
         self.assertEqual(
-            Base.to_json_string([r71]), '[{"id": 38, "size": 10, "x": 1, "y": 9}]')
+            Base.to_json_string([r71]), '[{"id": 1, "size": 10, "x": 1, "y": 9}]')
         r72 = Square(10, 1)
         r73 = r72.to_dictionary()
         self.assertEqual(
-            Base.to_json_string([r73]), '[{"id": 39, "size": 10, "x": 1, "y": 0}]')
+            Base.to_json_string([r73]), '[{"id": 2, "size": 10, "x": 1, "y": 0}]')
         r74 = Square(10)
         r75 = r74.to_dictionary()
         self.assertEqual(
