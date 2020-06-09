@@ -122,16 +122,6 @@ class TestMaxInteger(unittest.TestCase):
         r40 = Rectangle(8, 7, 3, 5, "Edison")
         self.assertEqual(r40.area(), 56)
 
-    def test_display(self):
-        r41 = Rectangle(4, 6)
-        self.assertEqual(r41.display(), None)
-        r42 = Rectangle(8, 4, 3)
-        self.assertEqual(r42.display(), None)
-        r43 = Rectangle(3, 3, 3, 9)
-        self.assertEqual(r43.display(), None)
-        r44 = Rectangle(4, 2, 3, 9, "Holberton")
-        self.assertEqual(r44.display(), None)
-
     def test_str(self):
         r45 = Rectangle(4, 6)
         self.assertEqual(
@@ -145,13 +135,6 @@ class TestMaxInteger(unittest.TestCase):
         r48 = Rectangle(4, 2, 3, 9, "Esteban")
         self.assertEqual(r48.__str__(), '[Rectangle] (Esteban) 3/9 - 4/2')
         r49 = Rectangle(4, 6)
-        self.assertAlmostEqual(print(r49), None)
-        r50 = Rectangle(8, 4, 3)
-        self.assertEqual(print(r50), None)
-        r51 = Rectangle(3, 3, 3, 9)
-        self.assertEqual(print(r51), None)
-        r52 = Rectangle(4, 2, 3, 9, "Isaza")
-        self.assertEqual(print(r52), None)
 
     def test_update_args(self):
         r53 = Rectangle(4, 6)
