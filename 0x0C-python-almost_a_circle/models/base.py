@@ -42,7 +42,7 @@ class Base:
     @classmethod
     def save_to_file(cls, list_objs):
         new_list = []
-        if list_objs is None or not list_objs:
+        if list_objs is None:
             with open(
                     cls.__name__ + ".json", mode="w", encoding="utf-8") as f:
                 f.write(new_list)
