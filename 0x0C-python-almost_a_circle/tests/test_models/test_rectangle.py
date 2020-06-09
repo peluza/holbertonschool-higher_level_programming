@@ -134,13 +134,13 @@ class TestMaxInteger(unittest.TestCase):
     def test_str(self):
         r45 = Rectangle(4, 6)
         self.assertEqual(
-            r45.__str__(), '[Rectangle] ({}) 0/0 - 4/6'.format(r45.id))
+            r45.__str__(), '[Rectangle] (1) 0/0 - 4/6')
         r46 = Rectangle(8, 4, 3)
         self.assertEqual(
-            r46.__str__(), '[Rectangle] ({}) 3/0 - 8/4'.format(r46.id))
+            r46.__str__(), '[Rectangle] (2) 3/0 - 8/4')
         r47 = Rectangle(3, 3, 3, 9)
         self.assertEqual(
-            r47.__str__(), '[Rectangle] ({}) 3/9 - 3/3'.format(r47.id))
+            r47.__str__(), '[Rectangle] (3) 3/9 - 3/3')
         r48 = Rectangle(4, 2, 3, 9, "Esteban")
         self.assertEqual(r48.__str__(), '[Rectangle] (Esteban) 3/9 - 4/2')
         r49 = Rectangle(4, 6)
@@ -171,7 +171,7 @@ class TestMaxInteger(unittest.TestCase):
         r58 = Rectangle(4, 2, 3)
         r58.update()
         self.assertEqual(
-            r58.__str__(), '[Rectangle] ({}) 3/0 - 4/2'.format(r58.id))
+            r58.__str__(), '[Rectangle] (5) 3/0 - 4/2')
 
     def test_update_kwargs(self):
         r59 = Rectangle(4, 6)
@@ -196,13 +196,13 @@ class TestMaxInteger(unittest.TestCase):
             r64.to_dictionary(), {'id': 345, 'width': 10, 'height': 2, 'x': 1, 'y': 9})
         r65 = Rectangle(10, 2, 1, 9)
         self.assertEqual(
-            r65.to_dictionary(), {'id': r65.id, 'width': 10, 'height': 2, 'x': 1, 'y': 9})
+            r65.to_dictionary(), {'id': 1, 'width': 10, 'height': 2, 'x': 1, 'y': 9})
         r66 = Rectangle(10, 2, 1)
         self.assertEqual(
-            r66.to_dictionary(), {'id': r66.id, 'width': 10, 'height': 2, 'x': 1, 'y': 0})
+            r66.to_dictionary(), {'id': 2, 'width': 10, 'height': 2, 'x': 1, 'y': 0})
         r67 = Rectangle(10, 2)
         self.assertEqual(
-            r67.to_dictionary(), {'id': r67.id, 'width': 10, 'height': 2, 'x': 0, 'y': 0})
+            r67.to_dictionary(), {'id': 3, 'width': 10, 'height': 2, 'x': 0, 'y': 0})
 
     def test_rectangle_json(self):
         r68 = Rectangle(10, 2, 1, 9, 345)

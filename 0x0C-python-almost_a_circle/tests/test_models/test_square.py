@@ -20,11 +20,11 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_square_str(self):
         s1 = Square(5)
-        self.assertEqual(s1.__str__(), '[Square] ({}) 0/0 - 5'.format(s1.id))
+        self.assertEqual(s1.__str__(), '[Square] (1) 0/0 - 5')
         s2 = Square(2, 2)
-        self.assertEqual(s2.__str__(), '[Square] ({}) 2/0 - 2'.format(s2.id))
+        self.assertEqual(s2.__str__(), '[Square] (2) 2/0 - 2')
         s3 = Square(3, 1, 3)
-        self.assertEqual(s3.__str__(), '[Square] ({}) 1/3 - 3'.format(s3.id))
+        self.assertEqual(s3.__str__(), '[Square] (3) 1/3 - 3')
         s4 = Square(2, 5, 4, 89)
         self.assertEqual(s4.__str__(), '[Square] (89) 5/4 - 2')
         s5 = Square(234, 35436, 12, 1234156)
@@ -33,10 +33,10 @@ class TestMaxInteger(unittest.TestCase):
     def test_square_size_positive(self):
         s6 = Square(5)
         s6.size = 10
-        self.assertEqual(s6.__str__(), '[Square] ({}) 0/0 - 10'.format(s6.id))
+        self.assertEqual(s6.__str__(), '[Square] (1) 0/0 - 10')
         s7 = Square(500)
         s7.size = 500
-        self.assertEqual(s7.__str__(), '[Square] ({}) 0/0 - 500'.format(s7.id))
+        self.assertEqual(s7.__str__(), '[Square] (2) 0/0 - 500')
 
     def test_square_size_negative(self):
         s8 = Square(5)
@@ -105,7 +105,7 @@ class TestMaxInteger(unittest.TestCase):
         s25 = Square(4, 2, 3)
         s25.update()
         self.assertEqual(
-            s25.__str__(), '[Square] ({}) 2/3 - 4'.format(s25.id))
+            s25.__str__(), '[Square] (5) 2/3 - 4')
 
     def test_update_kwargs(self):
         s26 = Square(4)
@@ -130,16 +130,16 @@ class TestMaxInteger(unittest.TestCase):
             s31.to_dictionary(), {'id': 345, "size": 10, 'x': 2, 'y': 9})
         s32 = Square(10, 2, 1)
         self.assertEqual(
-            s32.to_dictionary(), {'id': s32.id, 'size': 10, 'x': 2, 'y': 1})
+            s32.to_dictionary(), {'id': 1, 'size': 10, 'x': 2, 'y': 1})
         s33 = Square(10, 2, 1)
         self.assertEqual(
-            s33.to_dictionary(), {'id': s33.id, 'size': 10, 'x': 2, 'y': 1})
+            s33.to_dictionary(), {'id': 2, 'size': 10, 'x': 2, 'y': 1})
         s34 = Square(10, 2)
         self.assertEqual(
-            s34.to_dictionary(), {'id': s34.id, 'size': 10, 'x': 2, 'y': 0})
+            s34.to_dictionary(), {'id': 3, 'size': 10, 'x': 2, 'y': 0})
         s35 = Square(10)
         self.assertEqual(
-            s35.to_dictionary(), {'id': s35.id, 'size': 10, 'x': 0, 'y': 0})
+            s35.to_dictionary(), {'id': 4, 'size': 10, 'x': 0, 'y': 0})
 
     def test_square_json(self):
         r68 = Square(10, 1, 9, 345)
