@@ -8,6 +8,11 @@ from models.base import Base
 
 
 class TestMaxInteger(unittest.TestCase):
+    """TextMaxInteger(unittest.TesCase)
+
+    Args:
+        unittest (Test): analysis of data
+    """
 
     def setUp(self):
         Base._Base__nb_objects = 0

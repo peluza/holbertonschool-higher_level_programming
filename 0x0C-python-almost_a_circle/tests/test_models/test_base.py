@@ -7,6 +7,11 @@ from models.base import Base
 
 
 class TestMaxInteger(unittest.TestCase):
+    """TextMaxInteger(unittest.TesCase)
+
+    Args:
+        unittest (Test): analysis of data
+    """
 
     def test_pep8_conformance_base(self):
         pep8style = pep8.StyleGuide(quiet=True)

@@ -6,11 +6,12 @@ import pep8
 from models.rectangle import Rectangle, Base
 
 
-def print1(value):
-    return value
-
-
 class TestMaxInteger(unittest.TestCase):
+    """TextMaxInteger(unittest.TesCase)
+
+    Args:
+        unittest (Test): analysis of data
+    """
 
     def setUp(self):
         Base._Base__nb_objects = 0
