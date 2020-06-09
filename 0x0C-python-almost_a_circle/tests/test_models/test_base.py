@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""test_base)
+"""test_base
 """
 import unittest
 import pep8
