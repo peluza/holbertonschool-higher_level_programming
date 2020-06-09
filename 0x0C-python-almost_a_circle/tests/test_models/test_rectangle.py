@@ -7,7 +7,7 @@ from models.rectangle import Rectangle
 from models.base import Base
 
 
-class TestMaxInteger(unittest.TestCase):
+class TestRectangle(unittest.TestCase):
     """TextMaxInteger(unittest.TesCase)
 
     Args:

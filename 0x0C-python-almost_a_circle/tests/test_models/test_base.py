@@ -6,7 +6,7 @@ import pep8
 from models.base import Base
 
 
-class TestMaxInteger(unittest.TestCase):
+class TestBase(unittest.TestCase):
     """TextMaxInteger(unittest.TesCase)
 
     Args:
