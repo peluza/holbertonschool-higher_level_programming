@@ -41,17 +41,19 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
+        filename = cls.__name__ + ".json"
         new_list = []
         if list_objs is None:
+            new_json = cls.to_json_string(new_list)
             with open(
-                    cls.__name__ + ".json", mode="w", encoding="utf-8") as f:
-                f.write(new_list)
+                    filename, mode="w", encoding="utf-8") as f:
+                f.write(new_json)
         else:
             for i in list_objs:
                 new_list.append(i.to_dictionary())
             new_json = cls.to_json_string(new_list)
             with open(
-                    cls.__name__ + ".json", mode="w", encoding="utf-8") as f:
+                    filename, mode="w", encoding="utf-8") as f:
                 f.write(new_json)
 
     @classmethod
