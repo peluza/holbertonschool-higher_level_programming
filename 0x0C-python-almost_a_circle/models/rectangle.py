@@ -12,6 +12,15 @@ class Rectangle(Base):
     """
 
     def __init__(self, width, height, x=0, y=0, id=None):
+        """__init__(width,height,x,y,id)
+
+        Args:
+            width (int): the width is the intenger
+            height (int): the height is the intenger
+            x (int): the x is intenger >= 0. Defaults to 0.
+            y (int): the y is intenger >= 0. Defaults to 0.
+            id (optional): the id id type opcional. Defaults to None.
+        """
         self.width = width
         self.height = height
         self.x = x
