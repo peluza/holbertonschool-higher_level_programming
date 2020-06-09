@@ -26,7 +26,7 @@ class Base:
     @staticmethod
     def to_json_string(list_dictionaries):
         if type(list_dictionaries) is list:
-            if list_dictionaries is None:
+            if list_dictionaries is None or not list_dictionaries:
                 list_dictionaries = "[]"
                 return list_dictionaries
             else:
@@ -34,7 +34,7 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
-        if json_string is None and json_string != []:
+        if json_string is None or not json_string:
             new_list = []
             return new_list
         else:
