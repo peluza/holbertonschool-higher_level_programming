@@ -177,34 +177,42 @@ class TestMaxInteger(unittest.TestCase):
     def test_rectangle_dictionary(self):
         r64 = Rectangle(10, 2, 1, 9, 345)
         self.assertEqual(
-            r64.to_dictionary(), {'id': 345, 'width': 10, 'height': 2, 'x': 1, 'y': 9})
+            r64.to_dictionary(),
+            {'id': 345, 'width': 10, 'height': 2, 'x': 1, 'y': 9})
         r65 = Rectangle(10, 2, 1, 9)
         self.assertEqual(
-            r65.to_dictionary(), {'id': 1, 'width': 10, 'height': 2, 'x': 1, 'y': 9})
+            r65.to_dictionary(),
+            {'id': 1, 'width': 10, 'height': 2, 'x': 1, 'y': 9})
         r66 = Rectangle(10, 2, 1)
         self.assertEqual(
-            r66.to_dictionary(), {'id': 2, 'width': 10, 'height': 2, 'x': 1, 'y': 0})
+            r66.to_dictionary(),
+            {'id': 2, 'width': 10, 'height': 2, 'x': 1, 'y': 0})
         r67 = Rectangle(10, 2)
         self.assertEqual(
-            r67.to_dictionary(), {'id': 3, 'width': 10, 'height': 2, 'x': 0, 'y': 0})
+            r67.to_dictionary(),
+            {'id': 3, 'width': 10, 'height': 2, 'x': 0, 'y': 0})
 
     def test_rectangle_json(self):
         r68 = Rectangle(10, 2, 1, 9, 345)
         r69 = r68.to_dictionary()
         self.assertEqual(
-            Base.to_json_string([r69]), '[{"id": 345, "width": 10, "height": 2, "x": 1, "y": 9}]')
+            Base.to_json_string([r69]),
+            '[{"id": 345, "width": 10, "height": 2, "x": 1, "y": 9}]')
         r70 = Rectangle(10, 2, 1, 9)
         r71 = r70.to_dictionary()
         self.assertEqual(
-            Base.to_json_string([r71]), '[{"id": 1, "width": 10, "height": 2, "x": 1, "y": 9}]')
+            Base.to_json_string([r71]),
+            '[{"id": 1, "width": 10, "height": 2, "x": 1, "y": 9}]')
         r72 = Rectangle(10, 2, 1)
         r73 = r72.to_dictionary()
         self.assertEqual(
-            Base.to_json_string([r73]), '[{"id": 2, "width": 10, "height": 2, "x": 1, "y": 0}]')
+            Base.to_json_string([r73]),
+            '[{"id": 2, "width": 10, "height": 2, "x": 1, "y": 0}]')
         r74 = Rectangle(10, 2)
         r75 = r74.to_dictionary()
         self.assertEqual(
-            Base.to_json_string(r75), '{"id": 3, "width": 10, "height": 2, "x": 0, "y": 0}')
+            Base.to_json_string(r75),
+            '{"id": 3, "width": 10, "height": 2, "x": 0, "y": 0}')
         r76 = Rectangle(10, 2)
         self.assertEqual(
             Base.to_json_string([]), '[]')
