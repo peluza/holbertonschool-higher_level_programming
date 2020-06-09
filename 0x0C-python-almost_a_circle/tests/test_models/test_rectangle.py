@@ -192,28 +192,3 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(
             r67.to_dictionary(),
             {'id': 3, 'width': 10, 'height': 2, 'x': 0, 'y': 0})
-
-    def test_rectangle_json(self):
-        r68 = Rectangle(10, 2, 1, 9, 345)
-        r69 = r68.to_dictionary()
-        self.assertEqual(
-            Base.to_json_string([r69]),
-            '[{"width": 10, "x": 1, "id": 345, "y": 9, "height": 2}]')
-        r70 = Rectangle(10, 2, 1, 9)
-        r71 = r70.to_dictionary()
-        self.assertEqual(
-            Base.to_json_string([r71]),
-            '[{"id": 1, "width": 10, "height": 2, "x": 1, "y": 9}]')
-        r72 = Rectangle(10, 2, 1)
-        r73 = r72.to_dictionary()
-        self.assertEqual(
-            Base.to_json_string([r73]),
-            '[{"id": 2, "width": 10, "height": 2, "x": 1, "y": 0}]')
-        r74 = Rectangle(10, 2)
-        r75 = r74.to_dictionary()
-        self.assertEqual(
-            Base.to_json_string(r75),
-            '{"id": 3, "width": 10, "height": 2, "x": 0, "y": 0}')
-        r76 = Rectangle(10, 2)
-        self.assertEqual(
-            Base.to_json_string([]), '[]')

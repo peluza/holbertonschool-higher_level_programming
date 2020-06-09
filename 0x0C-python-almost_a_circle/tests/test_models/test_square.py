@@ -146,28 +146,3 @@ class TestSquare(unittest.TestCase):
         s35 = Square(10)
         self.assertEqual(
             s35.to_dictionary(), {'id': 4, 'size': 10, 'x': 0, 'y': 0})
-
-    def test_square_json(self):
-        r68 = Square(10, 1, 9, 345)
-        r69 = r68.to_dictionary()
-        self.assertEqual(
-            Base.to_json_string([r69]),
-            '[{"size": 10, "x": 1, "id": 345, "y": 9}]')
-        r70 = Square(10, 1, 9)
-        r71 = r70.to_dictionary()
-        self.assertEqual(
-            Base.to_json_string([r71]),
-            '[{"id": 1, "size": 10, "x": 1, "y": 9}]')
-        r72 = Square(10, 1)
-        r73 = r72.to_dictionary()
-        self.assertEqual(
-            Base.to_json_string([r73]),
-            '[{"id": 2, "size": 10, "x": 1, "y": 0}]')
-        r74 = Square(10)
-        r75 = r74.to_dictionary()
-        self.assertEqual(
-            Base.to_json_string(r75),
-            '{"id": 3, "size": 10, "x": 0, "y": 0}')
-        r76 = Square(10)
-        self.assertEqual(
-            Base.to_json_string([]), '[]')
