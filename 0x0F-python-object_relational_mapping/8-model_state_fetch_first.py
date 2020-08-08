@@ -16,4 +16,4 @@ if __name__ == "__main__":
     if instance is not None:
         print("{:d}: {:s}".format(instance.id, instance.name))
     else:
-        print("")
+        print("Nothing")
