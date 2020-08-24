@@ -10,7 +10,7 @@ if __name__ == "__main__":
 
     rep = sys.argv[1]
     user = sys.argv[2]
-    url = "https://api.github.com/repos/" + user + "/" + rep + "/commits"
+    url = "https://api.github.com/repos/{}/{}/commits".format(user, rep)
     try:
         req = requests.get(url)
         json = req.json()
