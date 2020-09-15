@@ -8,7 +8,7 @@ if (!number1) {
 } else if (number1 === 1 && !number2) {
   console.log(0);
 } else {
-  argv.sort();
+  argv.sort(function (a, b) { return (a - b); });
   const len = argv.length;
   const result = len - 2;
   console.log(parseInt(argv[result], 10));
