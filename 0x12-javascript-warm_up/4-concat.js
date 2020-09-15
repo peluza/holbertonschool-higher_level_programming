@@ -1,5 +1,5 @@
 #!/usr/bin/node
-// Value of my argument
+// Create a sentence
 const argv = process.argv.slice(2);
 if (!argv[0]) {
   console.log('No argument');
