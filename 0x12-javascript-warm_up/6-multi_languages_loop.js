@@ -1,10 +1,7 @@
 #!/usr/bin/node
 // Loop to languages
-const Javascript = 'Javascript is amazing';
-const Python = 'Python is cool';
-const C = 'C is fun';
-const arr = [C, Python, Javascript];
-var i;
-for (i = 0; i < 3; i++) {
+const arr = ['C is fun', 'Python is cool', 'Javascript is amazing'];
+let i;
+for (i = 0; i < arr.length; i++) {
   console.log(arr[i]);
 }
