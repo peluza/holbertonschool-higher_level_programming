@@ -6,7 +6,7 @@ if (!number) {
   console.log('Missing size');
 } else {
   let i;
-  const x = 'x';
+  const x = 'X';
   for (i = 0; i < number; i++) {
     console.log(x.repeat(number));
   }
