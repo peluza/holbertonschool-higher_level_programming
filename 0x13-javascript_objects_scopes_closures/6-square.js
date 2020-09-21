@@ -4,7 +4,7 @@ const Pared = require('./5-square');
 class Square extends Pared {
   constructor (size) {
     super(size, size);
-    this.size = this.width;
+    this.size = size;
   }
 
   charPrint (c) {
