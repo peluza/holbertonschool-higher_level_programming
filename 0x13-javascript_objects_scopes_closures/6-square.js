@@ -9,7 +9,7 @@ class Square extends Pared {
   charPrint (c) {
     if (c) {
       let i;
-      const word = 'C';
+      const word = c;
       for (i = 0; i < this.width; i++) {
         console.log(word.repeat(this.width));
       }
