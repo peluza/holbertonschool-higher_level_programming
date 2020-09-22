@@ -3,11 +3,9 @@
 const args = process.argv;
 const file1 = args[2];
 const fs = require('fs');
-let str1;
-fs.readFile(file1, function (err, res) {
+fs.readFile(file1, 'utf-8', function (err, res) {
   if (err) {
     return console.error(err);
   }
-  str1 = res.toString();
-  console.log(str1);
+  console.log(res);
 });
