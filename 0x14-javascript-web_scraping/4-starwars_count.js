@@ -8,7 +8,7 @@ let count = 0;
 let j;
 request(url, function (error, response, body) {
   if (error) {
-    return console.error(error);
+    return console.log(error);
   }
   newdict = JSON.parse(body).results;
   for (i = 0; i < newdict.length; i++) {
