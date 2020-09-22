@@ -2,6 +2,7 @@
 const args = process.argv;
 const url = args[2];
 const request = require('request');
+const characterID = '18';
 let newdict;
 let i;
 let count = 0;
@@ -13,7 +14,7 @@ request(url, function (error, response, body) {
   newdict = JSON.parse(body).results;
   for (i = 0; i < newdict.length; i++) {
     for (j = 0; j < newdict[i].characters.length; j++) {
-      if (newdict[i].characters[j] === 'https://swapi-api.hbtn.io/api/people/18/') {
+      if (newdict[i].characters[j].includes(characterID)) {
         count = count + 1;
       }
     }
